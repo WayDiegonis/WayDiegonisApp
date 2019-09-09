@@ -10,12 +10,15 @@
 <ion-content padding>
   <ion-card *ngFor="let item of itens">
     <ion-card-header>
+            <img src="https://ichef.bbci.co.uk/images/ic/480xn/p04znpm3.jpg">
+
       <ion-card-subtitle>{{item.titulo}}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       <p>
         {{item.descricao}}
       </p>
+      <ion-button color="primary">Veja Mais</ion-button>
     </ion-card-content>
   </ion-card>
 
