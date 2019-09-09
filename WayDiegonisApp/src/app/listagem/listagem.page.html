@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+  	<ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listagem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let item of itens">
+    <ion-card-header>
+      <ion-card-subtitle>{{item.titulo}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        {{item.descricao}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

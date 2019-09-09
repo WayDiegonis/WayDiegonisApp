@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color= "primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Bem-vindo ao App</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p> Essa é a Página de Abertura</p>
+      <ion-spinner *ngIf="!articles" name="dots"></ion-spinner>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
