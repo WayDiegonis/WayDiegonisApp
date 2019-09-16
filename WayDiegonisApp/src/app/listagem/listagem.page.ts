@@ -8,14 +8,30 @@ import { ApiService } from '../api.service';
 })
 export class ListagemPage implements OnInit {
 
-  public itens: Array<{ titulo: string; descricao: string} > = [];
-  public posts: Array<any>;
+  public posts;
+  public page;
+  public total_page;
 
   constructor(private apiService: ApiService) {
-  this.apiService.getPosts().subscribe((data) =>{console.log(data);
-    // this.posts = data['data']['children'];
+
+    this. page = 1;
+
+
+    this.apiService.getPosts(this.page).subscribe((data) => {
+    console.log(data);
+    this.posts = data.data;
   });
 }
+
+  loadMoreData(event) {
+
+    this.page++;
+
+    this.apiService.getPosts(this.page).subscribe((data) => {
+    this.posts = data.data;
+    event.targed.complete();
+    });
+  }
   
   ngOnInit() {
   }

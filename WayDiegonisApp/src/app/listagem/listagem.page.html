@@ -8,18 +8,27 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let item of itens">
+  <ion-card *ngFor="let post of posts">
     <ion-card-header>
-            <img src="https://ichef.bbci.co.uk/images/ic/480xn/p04znpm3.jpg">
+            <img src="{{ post.avatar }}">
 
-      <ion-card-subtitle>{{item.titulo}}</ion-card-subtitle>
+      <ion-card-subtitle>
+      {{ post.first_name }} {{ post.last_name }}
+    </ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       <p>
-        {{item.descricao}}
+        {{post.email}}
       </p>
-      <ion-button color="primary">Veja Mais</ion-button>
+      <ion-button ion-button fill="outline" href="https://www.google.com" large>Veja Mais</ion-button>
     </ion-card-content>
   </ion-card>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMoreData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
