@@ -27,7 +27,7 @@ export class FormularioPage implements OnInit {
         this.formData.nome = this.router.getCurrentNavigation().extras.state.formDataParams.nome;
         this.formData.email = this.router.getCurrentNavigation().extras.state.formDataParams.email;
         this.formData.senha = this.router.getCurrentNavigation().extras.state.formDataParams.senha;
-        this.formData.senha = this.router.getCurrentNavigation().extras.state.formDataParams.setor;
+        this.formData.setor = this.router.getCurrentNavigation().extras.state.formDataParams.setor;
       }
     });
 

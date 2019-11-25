@@ -48,6 +48,7 @@ export class ListagemPage implements OnInit {
         'nome': post.nome,
         'email': post.email,
         'senha': post.senha,
+        'setor': post.setor,
         'modalController': this.modalController
       }
     });

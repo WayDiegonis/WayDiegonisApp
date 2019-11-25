@@ -11,8 +11,8 @@ export class ModalPage implements OnInit {
 
   // Data passed in by componentProps
   @Input() nome: string;
-  @Input() email: email;
-  @Input() senha: password;
+  @Input() email: string;
+  @Input() senha: string;
   @Input() setor: string;
   @Input() modalController: ModalController;
 
