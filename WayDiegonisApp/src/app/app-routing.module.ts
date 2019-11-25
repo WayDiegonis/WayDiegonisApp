@@ -16,7 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
   },
   { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
-  { path: 'listagem', loadChildren: './listagem/listagem.module#ListagemPageModule' }
+  { path: 'listagem', loadChildren: './listagem/listagem.module#ListagemPageModule' },
+  { path: 'formulario', loadChildren: './formulario/formulario.module#FormularioPageModule' },
+  { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
+  { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' }
 ];
 
 @NgModule({

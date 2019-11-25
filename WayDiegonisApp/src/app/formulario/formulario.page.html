@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color= "primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Formulário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <form (ngSubmit)="formSubmit()">
+      <ion-item>
+        <ion-label>Nome:</ion-label>
+        <ion-input type="text" [(ngModel)]="formData.nome" name="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email:</ion-label>
+        <ion-textarea [(ngModel)]="formData.email" name="email" required></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Senha:</ion-label>
+        <ion-textarea [(ngModel)]="formData.senha" name="senha" required type="password"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Setor: </ion-label>
+        <ion-textarea [(ngModel)]="formData.setor" name="setor" required ></ion-textarea>
+      </ion-item>
+      <ion-button type="submit" expand="block">Enviar</ion-button>
+    </form>
+
+</ion-content>
